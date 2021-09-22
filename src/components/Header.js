@@ -1,5 +1,7 @@
 import React from "react";
-import Logo from "../assets/logo.jpg"
+import Logo from "../assets/logo.jpg";
+
+
 const Header = () => {
   return (
     <nav className="navbar navbar-light bg-secondary d-flex justify-content-center">

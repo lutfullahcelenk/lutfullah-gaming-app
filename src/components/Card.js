@@ -5,10 +5,10 @@ const Card = ({game}) => {
     <div className="card col-md-4 mt-5 bg-light" key={game.id}>
       <img className="card-img-top" src={game.image} alt="game image" />
       <div className="card-img-overlay "> 
-      <div className="w-25 d-flex flex-column align-items-center bg-primary text-dark">
-          <h1>{game.point}</h1>
-          <h3>Points</h3>
-      </div>
+        <div className="w-25 d-flex flex-column align-items-center bg-primary text-dark">
+            <h1>{game.point}</h1>
+            <h3>Points</h3>
+        </div>
       </div>
       <div className="card-body">
         <h3 className="card-title">{game.name}</h3>
@@ -34,4 +34,4 @@ const Card = ({game}) => {
   );
 };
 
-export default Card;
+export default Card; 
