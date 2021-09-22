@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from "react";
 import { gameContext } from "../context/gameContext";
 
-const Pagination = ({postsPerPage,totalPosts,paginate}) => {
+const Pagination = ({postsPerPage, totalPosts, paginate}) => {
     // const postsPerPage = useContext(gameContext)
     // const totalPosts = useContext(gameContext)
 

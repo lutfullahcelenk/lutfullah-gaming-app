@@ -17,9 +17,9 @@ const MainPage = () => {
         <button className="btn btn-primary btn-lg">
           <i className="fas fa-plus me-2"></i>Add Nominee
         </button>
-        <div class="dropdown">
+        <div className="dropdown">
           <button
-            class="btn btn-secondary btn-lg"
+            className="btn btn-secondary btn-lg"
             type="button"
             id="dropdownMenuButton"
             data-bs-toggle="dropdown"
@@ -28,11 +28,11 @@ const MainPage = () => {
           >
             <i className="fas fa-sort me-2"></i>Sort By
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <button class="dropdown-item btn h5" href="#">
+          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button className="dropdown-item btn h5" href="#">
               Most Points
             </button>
-            <button class="dropdown-item btn h5" href="#">
+            <button className="dropdown-item btn h5" href="#">
               Less Points
             </button>
           </div>
