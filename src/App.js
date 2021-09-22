@@ -25,7 +25,8 @@ const App = () => {
         value={ currentPosts, paginate, postsPerPage, games }
       >
         <Switch>
-          <Route path="/homepage" component={Homepage} />
+          <Route exact path="/" component={Homepage} />
+          {/* <Route path="/homepage" component={Homepage} /> */}
           <Route path="/addpage" component={AddPage} />
         </Switch>
       </gameContext.Provider>
