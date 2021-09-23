@@ -26,12 +26,24 @@ const App = () => {
     const id = Date.now()
     const newGame = {...game,id}
     setGames((prevState) => [...prevState, newGame])
-  }
+  };
+  
+  // Delete Game
+  const deleteGame = (id,gname) => {
+    let result = window.confirm(`Are you want to delete ${gname}?`);
+    if(result) {
+      setGames(games.filter((game)=> (
+        id !== game.id
+        )))
+    }else{
+      return;
+    }  
+  };
 
   return (
     <Router>
       <gameContext.Provider
-        value={{ currentPosts, paginate, postsPerPage, games, addNomineeGame }}
+        value={{ currentPosts, paginate, postsPerPage, games, addNomineeGame, deleteGame }}
       >
         <Switch>
           <Route exact path="/" component={Homepage} />
