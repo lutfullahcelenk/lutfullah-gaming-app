@@ -11,3 +11,20 @@
 .card-img-top{
     height:200px;
 }
+
+.addpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    height: 100vh;
+
+    & form{
+        width: 30%;
+        & label{
+            margin: 10px 0;
+        }
+    }
+}
