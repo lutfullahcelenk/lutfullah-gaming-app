@@ -1,10 +1,3 @@
-const date = new Date();
-const year = date.getFullYear();
-const month = date.getMonth();
-const day = date.getDay();
-const hours = date.getHours();
-const minutes = date.getMinutes();
-const myDate = `${year}/${month}/${day}  ${hours}:${minutes}`;
 
 const InitialState = [
   {
@@ -12,7 +5,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -21,7 +13,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -30,7 +21,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -39,7 +29,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -48,7 +37,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -57,7 +45,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -66,7 +53,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
@@ -75,7 +61,6 @@ const InitialState = [
     point: 10,
     name: "Cs Go",
     winner: "Lütfullah",
-    votedate: myDate,
     image:
       "https://www.webtekno.com/images/editor/default/0003/10/ea1edc1663aea14ad280fe611937f48ff7e80210.jpeg",
   },
