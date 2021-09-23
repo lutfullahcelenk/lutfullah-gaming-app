@@ -14,7 +14,7 @@ const App = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = games.slice(indexOfFirstPost, indexOfLastPost);
-  console.log(currentPosts)
+  // console.log(currentPosts)
 
   // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -22,11 +22,10 @@ const App = () => {
   return (
     <Router>
       <gameContext.Provider
-        value={ currentPosts, paginate, postsPerPage, games }
+        value={{ currentPosts, paginate, postsPerPage, games }}
       >
         <Switch>
           <Route exact path="/" component={Homepage} />
-          {/* <Route path="/homepage" component={Homepage} /> */}
           <Route path="/addpage" component={AddPage} />
         </Switch>
       </gameContext.Provider>
