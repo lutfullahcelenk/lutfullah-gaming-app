@@ -8,6 +8,9 @@ import { useHistory } from "react-router";
 const MainPage = () => {
 
   const {currentPosts} = useContext(gameContext);
+  const {mostPoints} = useContext(gameContext);
+  const {games} = useContext(gameContext);
+
   const history = useHistory();
 
   const goAddNominee = () => {
@@ -39,7 +42,7 @@ const MainPage = () => {
           </button>
 
           <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <button className="dropdown-item btn h5" href="#">
+            <button className="dropdown-item btn h5" href="#" onClick={()=>mostPoints(games)}>
               Most Points
             </button>
             <button className="dropdown-item btn h5" href="#">
