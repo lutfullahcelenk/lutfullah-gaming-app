@@ -1,16 +1,40 @@
-import React from "react";
+import React,{useState} from "react";
 import { useHistory } from "react-router";
+import { useContext } from "react";
+import { gameContext } from "../context/gameContext";
 
 const AddPage = () => {
+
   const history = useHistory();
+
+  const {addNomineeGame} = useContext(gameContext);
+
+  const [name,setName] = useState("");
+  const [winner,setWinner] = useState("");
+  const [image,setImage] = useState("");
 
   const goHome = () => {
     history.push({ pathname: "/" });
   };
 
+  const handleSubmit = (e) => {
+      if(!name || !winner || !image) {
+          e.preventDefault();
+          alert("Fill the all blanks...")
+      }else{
+          e.preventDefault();
+          addNomineeGame({name,winner,image, point:0});
+          setName("");
+          setWinner("");
+          setImage("");
+      }
+  }
+
+  
+
   return (
     <div className="addpage">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <div class="form-group">
           <label for="exampleInputTournament" htmlFor="exampleInputTournament">
             Tournament Name:
@@ -20,7 +44,9 @@ const AddPage = () => {
             type="text"
             class="form-control"
             id="exampleInputTournament"
+            value={name}
             placeholder="Enter a Tournamenat Name"
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
 
@@ -32,7 +58,9 @@ const AddPage = () => {
             type="text"
             class="form-control"
             id="exampleInputWinner"
+            value={winner}
             placeholder="Enter the Winner Team"
+            onChange={(e) => setWinner(e.target.value)}
           />
         </div>
 
@@ -44,7 +72,9 @@ const AddPage = () => {
             type="text"
             class="form-control"
             id="exampleInputImage"
+            value={image}
             placeholder="Enter Image URL"
+            onChange={(e) => setImage(e.target.value)}
           />
         </div>
 

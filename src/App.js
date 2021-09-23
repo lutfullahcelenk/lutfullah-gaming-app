@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AddPage from "./pages/AddPage";
 
+
+
 const App = () => {
   const [games, setGames] = useState(InitialState);
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,10 +21,17 @@ const App = () => {
   // Change Page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  // Add Game
+  const addNomineeGame = (game) => {
+    const id = Date.now()
+    const newGame = {...game,id}
+    setGames((prevState) => [...prevState, newGame])
+  }
+
   return (
     <Router>
       <gameContext.Provider
-        value={{ currentPosts, paginate, postsPerPage, games }}
+        value={{ currentPosts, paginate, postsPerPage, games, addNomineeGame }}
       >
         <Switch>
           <Route exact path="/" component={Homepage} />
