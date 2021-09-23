@@ -35,14 +35,14 @@ const AddPage = () => {
   return (
     <div className="addpage">
       <form className="form" onSubmit={handleSubmit}>
-        <div class="form-group">
-          <label for="exampleInputTournament" htmlFor="exampleInputTournament">
+        <div className="form-group">
+          <label htmlFor="exampleInputTournament">
             Tournament Name:
           </label>
 
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleInputTournament"
             value={name}
             placeholder="Enter a Tournamenat Name"
@@ -50,13 +50,13 @@ const AddPage = () => {
           />
         </div>
 
-        <div class="form-group">
-          <label for="exampleInputWinner" htmlFor="exampleInputWinner">
+        <div className="form-group">
+          <label htmlFor="exampleInputWinner">
             Winner Team:
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleInputWinner"
             value={winner}
             placeholder="Enter the Winner Team"
@@ -65,12 +65,12 @@ const AddPage = () => {
         </div>
 
         <div class="form-group">
-          <label for="exampleInputImage" htmlFor="exampleInputImage">
+          <label htmlFor="exampleInputImage">
             Cover Image URL:
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleInputImage"
             value={image}
             placeholder="Enter Image URL"
@@ -79,13 +79,13 @@ const AddPage = () => {
         </div>
 
         <div className="d-flex justify-content-center mt-3">
-          <button type="submit" class="btn btn-warning">
+          <button type="submit" className="btn btn-warning">
             Add Nominee
           </button>
         </div>
       </form>
 
-      <button type="submit" class="btn btn-primary mt-5" onClick={goHome}>
+      <button type="submit" className="btn btn-primary mt-5" onClick={goHome}>
         Go back to Home
       </button>
     </div>

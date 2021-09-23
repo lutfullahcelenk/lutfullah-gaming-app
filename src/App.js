@@ -22,7 +22,10 @@ const App = () => {
   const addNomineeGame = (game) => {
     const id = Date.now();
     const newGame = { ...game, id };
-    setGames((prevState) => [...prevState, newGame]);
+    const gamesLast = [...games,newGame]
+    const sortedGames = gamesLast.sort((game1,game2) => (game1.id<game2.id ? 1 : game1.id>game2.id? -1: 0))
+    console.log(gamesLast)
+    setGames(sortedGames);
   };
 
   // Delete Game
@@ -52,7 +55,6 @@ const App = () => {
   };
 
   //LocalStorage
-
   useEffect(() => {
     const data = localStorage.getItem("game-list");
     if(data) {
@@ -63,6 +65,15 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("game-list", JSON.stringify(games))
   });
+
+  // Sorting Games
+    const mostPoints = (datas) => {
+    const sortedData = datas.sort((game1,game2) => (game2.point-game1.point))
+    setGames(sortedData)
+    console.log(sortedData)
+  }
+
+
 
   return (
     <Router>
@@ -76,6 +87,7 @@ const App = () => {
           deleteGame,
           upPoint,
           downPoint,
+          mostPoints
         }}
       >
         <Switch>
