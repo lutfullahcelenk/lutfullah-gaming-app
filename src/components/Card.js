@@ -4,6 +4,8 @@ import { gameContext } from "../context/gameContext";
 
 const Card = ({ game }) => {
   const { deleteGame } = useContext(gameContext);
+  const { upPoint } = useContext(gameContext);
+  const { downPoint } = useContext(gameContext);
 
   return (
     <div className="card col-md-4 mt-5 bg-light" key={game.id}>
@@ -19,11 +21,12 @@ const Card = ({ game }) => {
 
         <p className="card-text h5">{game.winner}</p>
 
-        <div className="btn-group ms-4 mt-3">
-          <button href="#" className="btn btn-outline-primary ">
+        <div className="btn-group ms-4 mt-3" >
+          <button href="#" className="btn btn-outline-primary" onClick={() => downPoint(game.id,game.point)}>
             <i className="fas fa-chevron-down"></i> Down
           </button>
-          <button href="#" className="btn btn-primary ">
+
+          <button href="#" className="btn btn-primary" onClick={() => upPoint(game.id,game.point)}>
             <i className="fas fa-chevron-up"></i> Up
           </button>
         </div>
