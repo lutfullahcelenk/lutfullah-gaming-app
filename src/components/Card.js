@@ -26,7 +26,7 @@ const Card = ({game}) => {
         <i className="fas fa-chevron-up"></i> Up
         </button>
         </div>
-        <button href="#" className="btn btn-danger ms-5 mt-3">
+        <button href="#" className=" btn btn-danger delete-btn ms-5 mt-3">
         <i className="fas fa-trash"></i> Delete
         </button>
       </div>

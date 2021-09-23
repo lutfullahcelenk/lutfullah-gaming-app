@@ -8,6 +8,14 @@
     border-radius: 25px;
 }
 
+.delete-btn{
+    visibility: hidden;
+}
+
+.card:hover .delete-btn{
+    visibility: visible;     
+}
+
 .card-img-top{
     height:200px;
 }
