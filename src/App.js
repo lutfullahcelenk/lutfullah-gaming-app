@@ -4,11 +4,17 @@ import { gameContext } from "./context/gameContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AddPage from "./pages/AddPage";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const App = () => {
   const [games, setGames] = useState(InitialState);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(6);
+
+  //Toastify
+  toast.configure();
 
   //Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -26,6 +32,7 @@ const App = () => {
     const sortedGames = gamesLast.sort((game1,game2) => (game1.id<game2.id ? 1 : game1.id>game2.id? -1: 0))
     console.log(gamesLast)
     setGames(sortedGames);
+    toast(`${game.name} is added...`,{position:toast.POSITION.BOTTOM_RIGHT});
   };
 
   // Delete Game
@@ -33,6 +40,7 @@ const App = () => {
     let result = window.confirm(`Are you want to delete ${gname}?`);
     if (result) {
       setGames(games.filter((game) => id !== game.id));
+      toast(`${gname} is deleted...`,{position:toast.POSITION.BOTTOM_RIGHT});
     } else {
       return;
     }
@@ -72,6 +80,8 @@ const App = () => {
     setGames(sortedData)
     console.log(sortedData)
   }
+
+  //
 
 
 
