@@ -20,6 +20,8 @@ const Card = ({ game }) => {
         <h3 className="card-title">{game.name}</h3>
 
         <p className="card-text h5">{game.winner}</p>
+        
+        <p className="card-text h5">{game.lastVoteDate}</p>
 
         <div className="btn-group ms-4 mt-3" >
           <button href="#" className="btn btn-outline-primary" onClick={() => downPoint(game.id,game.point)}>
