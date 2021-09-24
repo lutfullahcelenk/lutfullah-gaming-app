@@ -13,6 +13,16 @@ const AddPage = () => {
   const [winner,setWinner] = useState("");
   const [image,setImage] = useState("");
 
+   // ARRANGING DATE
+
+   const date = new Date();
+   const year = date.getFullYear();
+   const month = date.getMonth();
+   const day = date.getDay();
+   const hour = date.getHours();
+   const min = date.getMinutes();
+   const voteDate = day + "." + month + "." + year + " " + hour + ":" + min;
+
   const goHome = () => {
     history.push({ pathname: "/" });
   };
@@ -23,7 +33,7 @@ const AddPage = () => {
           alert("Fill the all blanks...")
       }else{
           e.preventDefault();
-          addNomineeGame({name,winner,image, point:0});
+          addNomineeGame({name,winner,image, point:0, lastVoteDate: voteDate});
           setName("");
           setWinner("");
           setImage("");
